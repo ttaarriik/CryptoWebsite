@@ -1,0 +1,29 @@
+/** @format */
+
+.cryptoList {
+	position: absolute;
+	left: 17%;
+	top: 20%;
+	height: 38rem;
+	width: 70%;
+	background-color: #9ca7ad;
+}
+
+.prev {
+	position: relative;
+	padding: 0.1rem 1rem 0.1rem 1rem;
+	background-color: #074266;
+	color: white;
+}
+
+.next {
+	position: relative;
+	padding: 0.1rem 1rem 0.1rem 1rem;
+	background-color: #074266;
+	color: white;
+}
+
+.buttons {
+	margin-right: 10rem;
+	margin-top: 5px;
+}

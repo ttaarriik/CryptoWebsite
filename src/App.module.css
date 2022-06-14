@@ -1,0 +1,15 @@
+/** @format */
+
+.img {
+	width: -webkit-fill-available;
+	overflow: hidden;
+	height: 100vh;
+}
+.main {
+	position: relative;
+	overflow: hidden;
+}
+
+body {
+	overflow: hidden;
+}

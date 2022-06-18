@@ -1,10 +1,41 @@
 /** @format */
 
 .cryptoInfo {
-	position: absolute;
-	left: 17%;
-	top: 20%;
-	height: 38rem;
-	width: 70%;
-	background-color: #9ca7ad;
+	overflow: hidden;
+	margin-left: 50px;
+	margin-bottom: 50px;
+}
+
+.cryptoSpec {
+	padding: 2rem;
+	width: 700px;
+	background-color: #c5dae0;
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-weight: bold;
+
+	margin-left: 3rem;
+}
+
+.cryptoDescription {
+	background-color: #c5dae0;
+	overflow: scroll;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.2rem;
+	height: 310px;
+	width: 600px;
+}
+
+svg:nth-child(1) {
+	width: 100%;
+
+	background: #c5dae0 !important;
+}
+
+.plot-container {
+	background: red;
+}
+
+.cryptoDetails {
+	display: flex;
+	justify-content: space-between;
 }

@@ -1,12 +1,10 @@
 /** @format */
 
 .cryptoList {
-	position: absolute;
-	left: 17%;
-	top: 20%;
-	height: 38rem;
+	margin: 5px 250px;
 	width: 70%;
-	background-color: #9ca7ad;
+	overflow: hidden;
+	background-color: #c5dae0;
 }
 
 .prev {
@@ -24,6 +22,12 @@
 }
 
 .buttons {
-	margin-right: 10rem;
+	margin-left: 25rem;
 	margin-top: 5px;
+}
+
+.search {
+	width: 70%;
+	margin-top: 50px;
+	margin-left: 250px;
 }

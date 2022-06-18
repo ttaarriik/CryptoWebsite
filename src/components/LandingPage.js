@@ -11,7 +11,7 @@ const LandingPage = () => {
 			<main className={classes.main}>
 				<TypingEffect />
 				<Link to="/Cryptos">
-					<Button variant="secondary">View Crypto List</Button>{" "}
+					<button className={classes.viewCryptoBtn}>View Crypto List</button>{" "}
 				</Link>
 			</main>
 		</React.Fragment>

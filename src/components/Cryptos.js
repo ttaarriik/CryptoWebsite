@@ -43,6 +43,7 @@ const Cryptos = () => {
 
 	return (
 		<React.Fragment>
+			<input className={classes.search} type="text" placeholder="Search" />
 			<Card className={classes.cryptoList}>
 				<ul>
 					{cryptoList.map((crypto) => (

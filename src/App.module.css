@@ -1,15 +1,6 @@
 /** @format */
 
 .img {
-	width: -webkit-fill-available;
-	overflow: hidden;
+	background: url("./IMG/cryptoSign.jpg") no-repeat center right/cover;
 	height: 100vh;
-}
-.main {
-	position: relative;
-	overflow: hidden;
-}
-
-body {
-	overflow: hidden;
 }

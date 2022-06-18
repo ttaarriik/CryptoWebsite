@@ -4,10 +4,12 @@
 	overflow: hidden;
 }
 
-button {
+.viewCryptoBtn {
 	position: absolute;
 	left: 45%;
 	top: 60%;
+	background-color: #074266;
+	color: white;
 }
 
 h1 {

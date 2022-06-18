@@ -44,7 +44,7 @@ const Crypto = ({ crypto }) => {
 				</div>
 			</div>
 			<Link to={`/Cryptos/${crypto.id}`}>
-				<button className={classes.button}>More info</button>
+				<button className={classes.button}>View Graph</button>
 			</Link>
 		</li>
 	);

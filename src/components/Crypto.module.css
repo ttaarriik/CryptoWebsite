@@ -28,6 +28,7 @@
 	font-family: monospace;
 	font-weight: bold;
 	font-size: 1.1rem;
+	width: 5rem;
 }
 
 .red {
@@ -41,6 +42,7 @@
 .rightDescription .rank {
 	margin-top: 1.7rem;
 	margin-right: 1.1rem;
+
 	font-size: 1.3rem;
 	font-weight: bold;
 }
@@ -81,4 +83,9 @@
 	color: white;
 	background: #074266;
 	border-radius: 14px;
+}
+
+svg {
+	margin-top: 2rem;
+	font-size: 1.8rem;
 }

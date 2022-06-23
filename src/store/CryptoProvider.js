@@ -5,6 +5,7 @@ import cryptoContext from "./cryptoContext";
 const CryptoProvider = (props) => {
 	const [cryptoInfo, setCryptoInfo] = useState({});
 	const [cryptoGraph, setCryptoGraph] = useState({});
+	const [cryptoWatchlist, setCryptoWatchlist] = useState([]);
 
 	const getCryptoInfo = (id) => {
 		id = id.toLowerCase();
@@ -39,10 +40,26 @@ const CryptoProvider = (props) => {
 		}
 	};
 
+	const addToWatchList = (crypto) => {
+		console.log("crypto", crypto);
+		let list = [...cryptoWatchlist, crypto];
+		console.log("list", list);
+		setCryptoWatchlist([...list]);
+		console.log("Cr wl", cryptoWatchlist);
+	};
+
+	const removeFromWatchList = (id) => {
+		let newWatchList = cryptoWatchlist.filter((crypto) => crypto.id !== id);
+		setCryptoWatchlist(newWatchList);
+	};
+
 	const providerValue = {
 		cryptoInfo: cryptoInfo,
 		cryptoGraph: cryptoGraph,
 		getCryptoInfo: getCryptoInfo,
+		addToWatchList: addToWatchList,
+		removeFromWatchList: removeFromWatchList,
+		watchList: [...cryptoWatchlist],
 	};
 
 	return (

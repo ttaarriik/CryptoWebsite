@@ -3,6 +3,7 @@
 import LandingPage from "./components/LandingPage";
 import Cryptos from "./components/Cryptos";
 import CryptoInfo from "./components/CryptoInfo";
+import WatchList from "./components/WatchList";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import classes from "./App.module.css";
@@ -16,6 +17,7 @@ const App = () => {
 					<Route path="/LandingPage" element={<LandingPage />} />
 					<Route path="/Cryptos/" element={<Cryptos />} />
 					<Route path="/Cryptos/:crypto" element={<CryptoInfo />} />
+					<Route path="/WatchList" element={<WatchList />} />
 				</Routes>
 			</div>
 		</main>

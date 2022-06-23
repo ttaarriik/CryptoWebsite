@@ -1,0 +1,74 @@
+/** @format */
+
+.cryptoList {
+	margin: 5px 250px;
+	width: 70%;
+	overflow: hidden;
+	background-color: #c5dae0 !important;
+}
+
+.prev {
+	position: relative;
+	padding: 0.1rem 1rem 0.1rem 1rem;
+	background-color: #074266;
+	color: white;
+}
+
+.next {
+	position: relative;
+	padding: 0.1rem 1rem 0.1rem 1rem;
+	background-color: #074266;
+	color: white;
+}
+
+.buttons {
+	margin-left: 25rem;
+	margin-top: 5px;
+}
+
+.search {
+	width: 70%;
+	margin-top: 50px;
+	margin-left: 250px;
+}
+
+ul ul {
+	list-style: none;
+	margin-left: 14rem;
+	margin-top: 1rem;
+	display: flex;
+}
+
+ul ul li {
+	margin-left: 1rem;
+	padding: 5px;
+}
+
+ul ul li:last-child,
+ul ul li:nth-child(1) {
+	padding: 0.1rem 1rem 0.1rem 1rem;
+	background-color: #074266;
+	color: white;
+	padding-top: 5px;
+}
+
+ul ul li:last-child a,
+ul ul li:nth-child(1) a {
+	color: white;
+	text-decoration: none;
+}
+
+ul ul li:hover {
+	background-color: #074266;
+	color: white;
+}
+
+ul ul li:focus {
+	background-color: #074266;
+	color: white;
+}
+
+.selected {
+	background-color: #074266;
+	color: white;
+}

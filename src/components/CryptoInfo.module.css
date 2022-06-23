@@ -38,4 +38,5 @@ svg:nth-child(1) {
 .cryptoDetails {
 	display: flex;
 	justify-content: space-between;
+	overflow: hidden;
 }

@@ -40,16 +40,16 @@ const Contact = () => {
 						className={classes.form}
 					>
 						<label htmlFor="name">First Name</label>
-						<input type="text" id="name"></input>
+						<input type="text" id="name" name="name"></input>
 						<label htmlFor="lastName">Last Name</label>
-						<input type="text" id="lastName"></input>
+						<input type="text" id="lastName" name="lastName"></input>
 						<label htmlFor="phone">Phone</label>
-						<input type="text"></input>
+						<input type="text" phone="phone"></input>
 						<label htmlFor="email">Email</label>
-						<input type="email" id="email"></input>
+						<input type="email" id="email" name="email"></input>
 						<label htmlFor="textarea">Message</label>
-						<textarea></textarea>
-						<button className={classes.submitBtn} type="button">
+						<textarea id="textarea" name="message"></textarea>
+						<button className={classes.submitBtn} type="submit">
 							Submit
 						</button>
 					</form>

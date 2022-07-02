@@ -31,7 +31,7 @@ const NavBar = () => {
 			<div className={"navBar"}>
 				<NavLink
 					className={(navData) => (navData.isActive ? "active" : "")}
-					to="/LandingPage"
+					to="/index"
 				>
 					Landing Page
 				</NavLink>

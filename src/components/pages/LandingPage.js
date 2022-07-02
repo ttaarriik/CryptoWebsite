@@ -18,9 +18,6 @@ const LandingPage = () => {
 						type: "spring",
 						stiffness: 50,
 					}}
-					exit={{
-						opacity: 0,
-					}}
 				>
 					{" "}
 					<TypingEffect />
@@ -36,9 +33,6 @@ const LandingPage = () => {
 							stiffness: 50,
 						}}
 						whileHover={{ scale: 1.2 }}
-						exit={{
-							opacity: 0,
-						}}
 						className={classes.viewCryptoBtn}
 					>
 						View Crypto List

@@ -19,8 +19,8 @@ const App = () => {
 				<NavBar />
 				<AnimatePresence exitBeforeEnter>
 					<Routes location={location} key={location.key}>
-						<Route path="/" element={<Navigate to="/LandingPage" />} />
-						<Route path="/LandingPage" element={<LandingPage />} />
+						<Route path="/" element={<Navigate to="/index" />} />
+						<Route path="/index" element={<LandingPage />} />
 						<Route path="/Cryptos/" element={<Cryptos />} />
 						<Route path="/:crypto" element={<CryptoInfo />} />
 						<Route path="/WatchList" element={<WatchList />} />

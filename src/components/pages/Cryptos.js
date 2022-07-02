@@ -2,10 +2,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./Cryptos.css";
 import Card from "../UI/Card";
-import Crypto from "./Crypto";
+import Crypto from "../helperComponents/Crypto";
 import ReactPaginate from "react-paginate";
-import cryptoContext from "../store/cryptoContext";
-import { Link } from "react-router-dom";
+import cryptoContext from "../../store/cryptoContext";
+import { motion } from "framer-motion";
 
 const Cryptos = () => {
 	const [currentItems, setCurrentItems] = useState([]);
@@ -17,18 +17,15 @@ const Cryptos = () => {
 
 	const itemsPerPage = 6;
 
+	//Pagination Configuration
 	useEffect(() => {
 		const endOffset = itemOffset + itemsPerPage;
-		console.log(`Loading items from ${itemOffset} to ${endOffset}`);
 		setCurrentItems(data.slice(itemOffset, endOffset));
 		setPageCount(Math.ceil(data.length / itemsPerPage));
 	}, [itemOffset, itemsPerPage, data]);
 
 	const handlePageClick = (event) => {
 		const newOffset = (event.selected * itemsPerPage) % data.length;
-		console.log(
-			`User requested page number ${event.selected}, which is offset ${newOffset}`
-		);
 		setItemOffset(newOffset);
 	};
 
@@ -46,9 +43,9 @@ const Cryptos = () => {
 				response = response.map((crypto) => {
 					return { ...crypto, isAddedToWatchList: false };
 				});
-				console.log("response", response);
+
 				let updatedData = checkForWatchList(response);
-				console.log("updatedData", updatedData);
+
 				setData(updatedData);
 				setDataForSearch(updatedData);
 			})
@@ -75,44 +72,68 @@ const Cryptos = () => {
 
 	const searchCryptoHandler = (event) => {
 		let searchedList = [];
-		console.log("dataForSearch", dataForSearch);
+
 		searchedList = dataForSearch.filter((crypto) => {
 			return crypto.id.includes(event.target.value);
 		});
-		console.log("searched", searchedList);
+
 		setData(searchedList);
 	};
 
-	console.log("data", data);
+	const animationVariant = {
+		hidden: {
+			translateX: "100vw",
+		},
+		visible: {
+			translateX: 0,
+			transition: {
+				duration: 0.1,
+				type: "spring",
+				stiffness: 50,
+			},
+		},
+		exit: { opacity: 0 },
+	};
 
 	return (
 		<React.Fragment>
-			<Link to="/WatchList">
-				<button>WatchList</button>
-			</Link>
-			<input
+			<motion.input
+				variants={animationVariant}
+				animate="visible"
+				initial="hidden"
+				exit="exit"
+				transition="transition"
 				onChange={searchCryptoHandler}
 				className="search"
 				type="text"
 				placeholder="Search"
 			/>
-			<Card className="cryptoList">
-				<ul>
-					{currentItems.map((crypto) => (
-						<Crypto key={crypto.id} crypto={crypto} />
-					))}
-					<ReactPaginate
-						breakLabel="..."
-						nextLabel="Next >"
-						onPageChange={handlePageClick}
-						marginPagesDisplayed={1}
-						pageRangeDisplayed={3}
-						pageCount={pageCount}
-						previousLabel="< Previous"
-						renderOnZeroPageCount={null}
-					/>
-				</ul>
-			</Card>
+
+			<motion.div
+				variants={animationVariant}
+				animate="visible"
+				initial="hidden"
+				transition="transition"
+				exit="exit"
+			>
+				<Card className="cryptoList">
+					<ul>
+						{currentItems.map((crypto) => (
+							<Crypto page={"Cryptos"} key={crypto.id} crypto={crypto} />
+						))}
+						<ReactPaginate
+							breakLabel="..."
+							nextLabel="Next >"
+							onPageChange={handlePageClick}
+							marginPagesDisplayed={1}
+							pageRangeDisplayed={3}
+							pageCount={pageCount}
+							previousLabel="< Previous"
+							renderOnZeroPageCount={null}
+						/>
+					</ul>
+				</Card>
+			</motion.div>
 		</React.Fragment>
 	);
 };

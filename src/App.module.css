@@ -4,3 +4,7 @@
 	background: url("./IMG/cryptoSign.jpg") no-repeat center right/cover;
 	height: 100vh;
 }
+
+body {
+	overflow: hidden;
+}

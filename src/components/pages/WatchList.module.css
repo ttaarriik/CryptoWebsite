@@ -1,0 +1,18 @@
+/** @format */
+
+.h2 {
+	color: white;
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-family: "Gill Sans", sans-serif;
+	font-size: 3rem;
+}
+
+.emptyMessage {
+	text-align: center;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	font-family: "Gill Sans", sans-serif;
+	font-size: 2rem;
+}

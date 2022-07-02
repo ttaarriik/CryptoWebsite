@@ -1,10 +1,10 @@
 /** @format */
 
-import Card from "../UI/Card";
+import { motion } from "framer-motion";
 import classes from "./CryptoInfo.module.css";
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import cryptoContext from "../store/cryptoContext";
+import cryptoContext from "../../store/cryptoContext";
 import React from "react";
 import Plot from "react-plotly.js";
 
@@ -16,7 +16,7 @@ const CryptoInfo = () => {
 	function isEmpty(obj) {
 		return Object.keys(obj).length === 0;
 	}
-	console.log("graph", ctx.cryptoGraph);
+
 	useEffect(() => {
 		ctx.getCryptoInfo(param.crypto);
 	}, []);
@@ -28,12 +28,31 @@ const CryptoInfo = () => {
 		? []
 		: ctx.cryptoGraph.prices.map((item) => item[1]);
 
-	console.log("Crypto info:", ctx.cryptoInfo);
+	const cryptoInfoVariant = {
+		visible: {
+			translateX: 0,
+			transition: {
+				duration: 0.4,
+				type: "spring",
+				stiffness: 50,
+			},
+		},
+		hidden: {
+			translateX: "100vw",
+		},
+		exit: { opacity: 0 },
+	};
 
 	return (
 		<React.Fragment>
 			{!isEmpty(ctx.cryptoInfo) && (
-				<div className={classes.cryptoInfo}>
+				<motion.div
+					variants={cryptoInfoVariant}
+					animate="visible"
+					initial="hidden"
+					exit="exit"
+					className={classes.cryptoInfo}
+				>
 					<Plot
 						data={[
 							{
@@ -92,10 +111,16 @@ const CryptoInfo = () => {
 							},
 						}}
 					/>
-				</div>
+				</motion.div>
 			)}
 			{!isEmpty(ctx.cryptoInfo) && (
-				<div className={classes.cryptoDetails}>
+				<motion.div
+					variants={cryptoInfoVariant}
+					animate="visible"
+					initial="hidden"
+					exit="exit"
+					className={classes.cryptoDetails}
+				>
 					<div className={classes.cryptoSpec}>
 						<img src={ctx.cryptoInfo.image.small} />
 						<div>{ctx.cryptoInfo.name}</div>
@@ -148,7 +173,7 @@ const CryptoInfo = () => {
 					<div className={classes.cryptoDescription}>
 						{ctx.cryptoInfo.description.en}
 					</div>
-				</div>
+				</motion.div>
 			)}
 		</React.Fragment>
 	);

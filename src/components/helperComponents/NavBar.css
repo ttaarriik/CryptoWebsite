@@ -1,0 +1,33 @@
+/** @format */
+
+.navBar {
+	background-color: #074266;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.navBar a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3rem;
+	font-family: Georgia, serif;
+	height: 3rem;
+	width: 15rem;
+	text-align: center;
+	padding-top: 0.5rem;
+}
+
+.navBar a:hover {
+	background-color: #575959;
+	color: white;
+}
+
+.active {
+	background-color: #575959;
+}
+
+.addedEffect {
+	font-size: 1.5rem !important;
+	background-color: green;
+}

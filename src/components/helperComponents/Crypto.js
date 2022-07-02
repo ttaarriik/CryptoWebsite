@@ -3,16 +3,15 @@
 import classes from "./Crypto.module.css";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import cryptoContext from "../store/cryptoContext";
+import cryptoContext from "../../store/cryptoContext";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { motion } from "framer-motion";
 
-const Crypto = ({ crypto }) => {
+const Crypto = ({ crypto, page }) => {
 	let isGold = crypto.market_cap_rank === 1 ? true : false;
 	let isSilver = crypto.market_cap_rank === 2 ? true : false;
 	let isBronze = crypto.market_cap_rank === 3 ? true : false;
 	const ctx = useContext(cryptoContext);
-
-	console.log("Watch 2", ctx.watchList);
 
 	const watchListHandler = () => {
 		if (crypto.isAddedToWatchList) {
@@ -25,7 +24,7 @@ const Crypto = ({ crypto }) => {
 	};
 
 	return (
-		<li className={classes.li}>
+		<motion.li whileHover={{ scale: 1.1 }} className={classes.li}>
 			<div className={classes.leftDescription}>
 				<div
 					className={`${classes.rank} ${isGold ? classes.gold : ""} ${
@@ -56,13 +55,20 @@ const Crypto = ({ crypto }) => {
 					{crypto.price_change_percentage_24h}%
 				</div>
 			</div>
-			<div onClick={watchListHandler}>
-				{crypto.isAddedToWatchList ? <AiFillStar /> : <AiOutlineStar />}
-			</div>
-			<Link to={`/Cryptos/${crypto.id}`}>
+			{page === "Cryptos" ? (
+				<div onClick={watchListHandler}>
+					{crypto.isAddedToWatchList ? <AiFillStar /> : <AiOutlineStar />}
+				</div>
+			) : (
+				<div onClick={watchListHandler}>
+					{<button className={classes.delete}>Delete</button>}
+				</div>
+			)}
+
+			<Link to={`/${crypto.id}`}>
 				<button className={classes.button}>View Graph</button>
 			</Link>
-		</li>
+		</motion.li>
 	);
 };
 

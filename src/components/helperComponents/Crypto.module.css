@@ -79,9 +79,16 @@
 .button {
 	margin-top: 2rem;
 	bottom: 209px;
-	margin-right: 1.1rem;
+	margin-right: 3rem;
 	color: white;
 	background: #074266;
+	border-radius: 14px;
+}
+
+.delete {
+	margin-top: 2rem;
+	color: white;
+	background: #fc0303;
 	border-radius: 14px;
 }
 

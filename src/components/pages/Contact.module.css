@@ -1,0 +1,61 @@
+/** @format */
+.main {
+	display: flex;
+	justify-content: space-around;
+}
+
+.contactInfo {
+	width: 30rem;
+	padding: 2rem;
+	margin-top: 3rem;
+	background-color: #c5dae0;
+}
+
+.contactInfo h2 {
+	text-align: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form input {
+	margin-bottom: 1rem;
+}
+
+.submitBtn {
+	margin-top: 2rem;
+	background-color: #074266;
+	color: white;
+}
+
+.about {
+	background-color: #c5dae0;
+	width: 700px;
+	padding: 2rem;
+	margin-top: 3rem;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.1rem;
+}
+
+.images {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.images img {
+	width: 6rem;
+}
+
+.images img:hover {
+	transform: scale(1.2);
+	transition: transform 0.2s;
+}
+
+.a {
+	color: black;
+	text-decoration: none;
+}

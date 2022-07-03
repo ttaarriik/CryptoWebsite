@@ -32,7 +32,12 @@ const Contact = () => {
 			>
 				<Card className={classes.contactInfo}>
 					<h2>Contact Us</h2>
-					<form name="contact" method="post" className={classes.form}>
+					<form
+						name="contact"
+						method="POST"
+						data-netlify="true"
+						className={classes.form}
+					>
 						<label htmlFor="name">First Name</label>
 						<input type="text" id="name" name="Name"></input>
 						<label htmlFor="lastName">Last Name</label>

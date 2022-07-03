@@ -28,6 +28,27 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <form
+    name="contact" netlify netlify-honeypot="bot-field" hidden
+						className={classes.form}
+					>
+						<label htmlFor="name">First Name</label>
+						<input type="text" id="name" name="Name"></input>
+						<label htmlFor="lastName">Last Name</label>
+						<input type="text" id="lastName" name="LastName"></input>
+						<label htmlFor="phone">Phone</label>
+						<input type="text" name="Phone"></input>
+						<label htmlFor="email">Email</label>
+						<input type="email" id="email" name="Email"></input>
+						<label htmlFor="textarea">Message</label>
+						<textarea id="textarea" name="Message"></textarea>
+						<div class="recaptcha">
+							<div data-netlify-recaptcha="true"></div>
+						</div>
+						<button className={classes.submitBtn} type="submit">
+							Submit
+						</button>
+					</form>
     <div id="root"></div>
     <!--
       This HTML file is a template.

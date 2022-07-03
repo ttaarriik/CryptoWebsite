@@ -34,10 +34,12 @@ const Contact = () => {
 					<h2>Contact Us</h2>
 					<form
 						name="contact"
-						method="POST"
+						method="post"
 						data-netlify="true"
+						onSubmit="submit"
 						className={classes.form}
 					>
+						<input type="hidden" name="form-name" value="contact" />
 						<label htmlFor="name">First Name</label>
 						<input type="text" id="name" name="Name"></input>
 						<label htmlFor="lastName">Last Name</label>

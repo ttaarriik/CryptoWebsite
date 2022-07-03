@@ -33,22 +33,24 @@ const Contact = () => {
 				<Card className={classes.contactInfo}>
 					<h2>Contact Us</h2>
 					<form
-						name="contact"
 						method="POST"
-						netlify-honeypot="bot-field"
 						data-netlify="true"
+						data-netlify-recaptcha="true"
 						className={classes.form}
 					>
 						<label htmlFor="name">First Name</label>
-						<input type="text" id="name" name="name"></input>
+						<input type="text" id="name" name="Name"></input>
 						<label htmlFor="lastName">Last Name</label>
-						<input type="text" id="lastName" name="lastName"></input>
+						<input type="text" id="lastName" name="LastName"></input>
 						<label htmlFor="phone">Phone</label>
-						<input type="text" phone="phone"></input>
+						<input type="text" name="Phone"></input>
 						<label htmlFor="email">Email</label>
-						<input type="email" id="email" name="email"></input>
+						<input type="email" id="email" name="Email"></input>
 						<label htmlFor="textarea">Message</label>
-						<textarea id="textarea" name="message"></textarea>
+						<textarea id="textarea" name="Message"></textarea>
+						<div class="recaptcha">
+							<div data-netlify-recaptcha="true"></div>
+						</div>
 						<button className={classes.submitBtn} type="submit">
 							Submit
 						</button>

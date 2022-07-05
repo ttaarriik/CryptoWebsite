@@ -56,7 +56,7 @@ const Crypto = ({ crypto, page }) => {
 				</div>
 			</div>
 			{page === "Cryptos" ? (
-				<div onClick={watchListHandler}>
+				<div className={classes.watchListBtn} onClick={watchListHandler}>
 					{crypto.isAddedToWatchList ? <AiFillStar /> : <AiOutlineStar />}
 				</div>
 			) : (

@@ -1,6 +1,7 @@
 /** @format */
 import React from "react";
 import classes from "./LandingPage.module.css";
+
 import { motion } from "framer-motion";
 import TypingEffect from "../UI/TypingEffect";
 import { Link } from "react-router-dom";

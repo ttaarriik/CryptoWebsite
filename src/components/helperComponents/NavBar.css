@@ -31,3 +31,14 @@
 	font-size: 1.5rem !important;
 	background-color: green;
 }
+
+@media (max-width: 900px) {
+	.navBar {
+		width: 100%;
+	}
+
+	.navBar a {
+		font-size: 0.8rem;
+		margin-left: 1rem;
+	}
+}

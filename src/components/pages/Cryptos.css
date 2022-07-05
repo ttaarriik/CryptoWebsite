@@ -72,3 +72,61 @@ ul ul li:focus {
 	background-color: #074266;
 	color: white;
 }
+
+/** For tablets */
+
+@media (max-width: 900px) {
+	.cryptoList {
+		margin: 5px 100px;
+		width: 80%;
+		overflow: hidden;
+		background-color: #c5dae0 !important;
+	}
+	ul ul li:last-child,
+	ul ul li:nth-child(1) {
+		padding: 0;
+	}
+
+	.search {
+		width: 80%;
+		margin-top: 30px;
+		margin-left: 100px;
+	}
+
+	ul ul {
+		list-style: none;
+		margin-left: 7rem;
+		display: flex;
+	}
+
+	ul ul li {
+		margin-left: 0.5rem;
+		padding: 1px;
+	}
+}
+
+@media (max-width: 500px) {
+	.cryptoList {
+		margin: 5px 50px;
+		width: 80%;
+		overflow: hidden;
+		background-color: #c5dae0 !important;
+	}
+
+	.search {
+		width: 80%;
+		margin-top: 30px;
+		margin-left: 50px;
+	}
+	ul ul {
+		list-style: none;
+		margin-left: -1rem;
+		margin-right: 5rem;
+		display: flex;
+	}
+
+	ul ul li {
+		margin-left: 0.5rem;
+		padding: 1px;
+	}
+}

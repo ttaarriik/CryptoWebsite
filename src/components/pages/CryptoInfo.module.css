@@ -22,7 +22,8 @@
 	font-family: "Times New Roman", Times, serif;
 	font-size: 1.2rem;
 	height: 280px;
-	width: 600px;
+	width: 500px;
+	margin-right: 2rem;
 }
 
 svg:nth-child(1) {
@@ -39,4 +40,72 @@ svg:nth-child(1) {
 	display: flex;
 	justify-content: space-between;
 	overflow: hidden;
+}
+
+@media (max-width: 900px) {
+	.graph {
+		overflow: scroll;
+	}
+
+	.cryptoSpec {
+		padding: 2rem;
+		width: 300px;
+		background-color: #c5dae0;
+		font-family: "Lucida Console", "Courier New", monospace;
+		font-weight: bold;
+		height: 280px;
+		margin-left: 3rem;
+	}
+
+	.cryptoDescription {
+		background-color: #c5dae0;
+		overflow: scroll;
+		font-family: "Times New Roman", Times, serif;
+		font-size: 1.2rem;
+		height: 280px;
+		width: 400px;
+	}
+
+	.cryptoDetails {
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 500px) {
+	.cryptoInfo {
+		overflow: hidden;
+		margin-left: 50px;
+		margin-bottom: 0.1rem;
+	}
+
+	.cryptoSpec {
+		padding: 0rem;
+		width: 300px;
+		background-color: #c5dae0;
+		font-family: "Lucida Console", "Courier New", monospace;
+		font-weight: bold;
+		height: 280px;
+		margin-left: 3rem;
+		margin-top: 0;
+	}
+
+	.cryptoDescription {
+		background-color: #c5dae0;
+		overflow: scroll;
+		font-family: "Times New Roman", Times, serif;
+		font-size: 1.2rem;
+		height: 200px;
+		width: 300px;
+		margin-left: 3rem;
+		margin-top: 0.2rem;
+	}
+
+	.cryptoDetails {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow: hidden;
+	}
 }

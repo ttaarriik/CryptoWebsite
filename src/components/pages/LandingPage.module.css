@@ -16,3 +16,32 @@
 	width: 700px;
 	margin-left: 450px;
 }
+
+/** For Tablets */
+
+@media (max-width: 900px) {
+	.viewCryptoBtn {
+		margin-top: 10rem;
+		margin-left: 350px;
+	}
+	.h1 {
+		margin-left: 280px;
+		width: 300px;
+	}
+	.h1 h1 {
+		font-size: 1.2rem;
+	}
+}
+
+/** For Smartphones */
+
+@media (max-width: 500px) {
+	.viewCryptoBtn {
+		margin-top: 10rem;
+		margin-left: 150px;
+	}
+	.h1 {
+		margin-left: 80px;
+		width: 300px;
+	}
+}
